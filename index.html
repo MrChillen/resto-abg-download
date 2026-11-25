@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resto ABG – App Download</title>
+  <script>
+    (function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera || "";
+
+      // HIER DEINE ECHTEN STORE-LINKS EINTRAGEN:
+      var iosUrl = "https://sites.google.com/view/datenschutzerklrung-resto-abg";
+      var androidUrl = "https://play.google.com/store/apps/details?id=com.jaeastudio.resto";
+      var fallbackUrl = androidUrl; // z. B. Play Store oder eine Info-Seite
+
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        window.location.replace(iosUrl);
+      } else if (/android/i.test(ua)) {
+        window.location.replace(androidUrl);
+      } else {
+        window.location.replace(fallbackUrl);
+      }
+    })();
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      background: #f7f5f0;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <p>Du wirst zu <strong>Resto ABG</strong> weitergeleitet…</p>
+</body>
+</html>
